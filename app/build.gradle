@@ -1,10 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'realm-android'
 }
-apply plugin: 'kotlin-kapt'
-apply plugin: 'realm-android'
-
 
 android {
     compileSdkVersion 31
@@ -16,7 +15,7 @@ android {
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"
-
+        buildConfigField "String", "RealmAppId", "\"mongdbrealmchat-tshsa\""
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
